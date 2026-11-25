@@ -1,0 +1,12 @@
+# STARTER FILE - the known must-haves only.
+# Run  python lock_versions.py  on a working PC to replace this with exact versions.
+# MEMFOF itself is installed from its own folder with  pip install -e .  (see INSTALL.md)
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+torch==2.11.0+cu128
+torchvision
+einops
+huggingface-hub
+safetensors
+opencv-python
+OpenEXR

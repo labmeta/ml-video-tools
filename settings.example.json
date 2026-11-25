@@ -1,0 +1,29 @@
+{
+  "_help": "Where each tool is installed. Use forward slashes (C:/ML/waft) or double backslashes (C:\\ML\\waft). Run  python process_clip.py --check  after changing anything.",
+
+  "tools": {
+    "depth_vda": { "install": "C:/ML/vda" },
+    "depth_da3": { "install": "C:/ML/da3/Depth-Anything-3" },
+    "flow_memfof": { "install": "C:/ML/memfof" },
+    "flow_waft": { "install": "C:/ML/waft" },
+    "mattes":    { "install": "C:/ML/sam" }
+  },
+
+  "defaults": {
+    "_help": "depth_engine: vda (Video Depth Anything) or da3 (Depth Anything 3). vda_encoder: vits = Small (commercial OK), vitb / vitl = Base / Large (non-commercial). depth_white: far (far = white) or near (near = white). flow_engine: memfof or waft. memfof_model: tskh (real-world) or spring (fine detail). flow_format (MEMFOF only): both (16-bit PNG + 32-bit EXR), png16 (PNG only) or exr (EXR only).",
+    "depth_engine": "vda",
+    "vda_encoder": "vits",
+    "depth_model": "depth-anything/DA3-BASE",
+    "depth_white": "far",
+    "flow_engine": "memfof",
+    "memfof_model": "tskh",
+    "flow_format": "both"
+  },
+
+  "babysitter": {
+    "frame_timeout_sec": 300,
+    "setup_timeout_sec": 3600,
+    "max_fails_in_a_row": 10,
+    "wait_before_retry_sec": 10
+  }
+}

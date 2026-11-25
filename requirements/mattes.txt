@@ -1,0 +1,20 @@
+# STARTER FILE - the known must-haves only.
+# Run  python lock_versions.py  on a working PC to replace this with exact versions.
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+torch==2.11.0+cu128
+torchvision
+# SAM 3 breaks with numpy 2 - and the newest OpenCV / scikit-image pull numpy 2 in
+numpy<2
+opencv-python<4.12
+scikit-image<0.26
+# Triton normally only exists on Linux - this is the Windows build SAM 3 needs
+triton-windows
+# Pulled in by SAM 3's code even when you're only using it, not training it
+einops
+pycocotools
+scipy
+psutil
+matplotlib
+pandas
+setuptools

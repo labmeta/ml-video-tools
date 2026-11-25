@@ -1,0 +1,16 @@
+# STARTER FILE - the known must-haves only.
+# Run  python lock_versions.py  on a working PC to replace this with exact versions.
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+torch==2.11.0+cu128
+torchvision
+timm
+opencv-python
+scipy
+einops
+matplotlib
+tqdm
+h5py
+# OpenCV can't write EXRs on Windows, so the flow tool uses this instead
+OpenEXR
+# xformers left out on purpose - WAFT works without it

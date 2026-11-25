@@ -1,0 +1,14 @@
+# Your own install paths and choices - made from settings.example.json on first run
+settings.json
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Release zips (made by make_release.py)
+*.zip
+
+# Left over from older versions (no longer used)
+tools/depth.py
+requirements/depth.txt
+requirements/flow.txt

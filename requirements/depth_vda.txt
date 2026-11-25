@@ -1,0 +1,21 @@
+# STARTER FILE - the known must-haves only.
+# Run  python lock_versions.py  on a working PC to replace this with exact versions.
+# (Video Depth Anything's own requirements.txt pins PyTorch 2.1 and numpy 1.24, which
+#  don't work with newer graphics cards or Python 3.12 - don't use it.)
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+torch==2.11.0+cu128
+torchvision
+numpy<2
+opencv-python
+# Video Depth Anything uses matplotlib.cm.get_cmap, which was removed in matplotlib 3.9
+matplotlib<3.9
+pillow
+imageio
+imageio-ffmpeg
+einops
+easydict
+tqdm
+# its own run.py writes EXRs with the older OpenEXR API
+OpenEXR==3.3.1
+# xformers and decord left out on purpose - both optional, and awkward on Windows
